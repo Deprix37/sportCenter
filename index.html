@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--CSS'i çektiğim yer-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Box icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--Bootstrap 5.3-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Sports Center App</title>
+  </head>
+  <body>
+    <!--TOP CONTENT-->
+    <div class="main-banner-img">
+      <!--NAVBAR-->
+      <nav class="navbar navbar-expand-lg navbar-dark" id="navbar-bg">
+        <div class="container">
+          <div id="menu-bar">
+            <a class="navbar-brand" href="#"
+              ><img src="images/logo.png" width="200"
+            /></a>
+            <button
+              id="menu"
+              onclick="onClickMenu()"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span id="bar1" class="bar"></span>
+              <span id="bar2" class="bar"></span>
+              <span id="bar3" class="bar"></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse"
+            style="place-content: center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#classes">Classes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#trainers">Trainer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#review">Review</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-join" href="#">JOIN US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--NAVBAR END-->
+      <!--MAIN BANNER-->
+      <div class="main-banner">
+        <div class="container">
+          <div class="row">
+            <div class="main-banner-iner">
+              <div class="top-badge">POWERFULL</div>
+              <div class="main-banner-title">
+                Group<br />Practice<br />With Trainer
+              </div>
+              <div class="main-banner-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex
+                quod a earum, exercitationem reprehenderit nostrum minus
+                molestias iusto tempora aperiam repudiandae accusantium ea eum
+                voluptatem rem ratione? Sed, natus tenetur. Lorem, ipsum dolor
+                sit amet consectetur adipisicing elit. Ex quod a earum,
+                exercitationem reprehenderit nostrum minus molestias iusto
+                tempora aperiam repudiandae accusantium ea eum voluptatem rem
+                ratione? Sed, natus tenetur.
+              </div>
+              <div class="main-banner-buttons">
+                <button class="btn-sign-up">Sign Up</button>
+                <button class="btn-details">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--MAIN BANNER END-->
+    </div>
+    <!--TOP CONTENT END-->
+    <!--COUNTER AREA-->
+    <div class="counter-area" id="counter-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="counter-cards">
+              <div class="counter" data-count="325"></div>
+              <div class="counter-name">Courses</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="counter-cards">
+              <div class="counter" data-count="405"></div>
+              <div class="counter-name">Work Out</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="counter-cards">
+              <div class="counter" data-count="305"></div>
+              <div class="counter-name">Working Hour</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="counter-cards">
+              <div class="counter" data-count="705"></div>
+              <div class="counter-name">Happy Client</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--COUNTER AREA END-->
+    <!--CLASSES AREA-->
+    <div class="bg-classes" id="classes">
+      <div class="container">
+        <div class="row">
+          <h1 class="general-title">OUR CLASSES</h1>
+          <p class="general-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <div></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="tab">
+            <div class="tab-parts">
+              <button
+                class="tablinks active"
+                onclick="openClass(event, 'Yoga', 'triangle1')"
+              >
+                Yoga
+              </button>
+              <div
+                id="triangle1"
+                class="triangleTab"
+                style="display: block"
+              ></div>
+            </div>
+            <div class="tab-parts">
+              <button
+                class="tablinks"
+                onclick="openClass(event, 'Group', 'triangle2')"
+              >
+                Group
+                <div id="triangle2" class="triangleTab"></div>
+              </button>
+            </div>
+            <div class="tab-parts">
+              <button
+                class="tablinks"
+                onclick="openClass(event, 'Solo', 'triangle3')"
+              >
+                Solo
+                <div id="triangle3" class="triangleTab"></div>
+              </button>
+            </div>
+            <div class="tab-parts">
+              <button
+                class="tablinks"
+                onclick="openClass(event, 'Stretching', 'triangle4')"
+              >
+                Stretching
+                <div id="triangle4" class="triangleTab"></div>
+              </button>
+            </div>
+          </div>
+
+          <div id="Yoga" class="tabcontent active" style="display: block">
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <div class="classes-text">
+                    <h1 class="tab-title">Why are your Yoga?</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                    <h1 class="tab-title">When come Yoga Your Time.</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                  </div>
+                </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <img
+                      src="images/yoga.jpg"
+                      alt="..."
+                      class="classes-img"
+                      style="max-width: 520px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="Group" class="tabcontent">
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <h1 class="tab-title">Why are your Yoga?</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                    <h1 class="tab-title">When come Yoga Your Time.</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <img
+                      src="images/group.webp"
+                      alt="..."
+                      class="classes-img"
+                      style="max-width: 520px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="Solo" class="tabcontent">
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <h1 class="tab-title">Why are your Yoga?</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                    <h1 class="tab-title">When come Yoga Your Time.</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <img
+                      src="images/solo.jpg"
+                      alt="..."
+                      class="classes-img"
+                      style="max-width: 520px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="Stretching" class="tabcontent">
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <h1 class="tab-title">Why are your Yoga?</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                    <h1 class="tab-title">When come Yoga Your Time.</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Necessitatibus rem mollitia libero minima possimus enim.
+                      Perspiciatis, earum deserunt nesciunt non magni natus
+                      commodi necessitatibus, autem a rerum, sint vel.
+                      Reiciendis.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <div class="classes-spacing">
+                    <img
+                      src="images/stret.webp"
+                      alt="..."
+                      class="classes-img"
+                      style="max-width: 520px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--CLASSES AREA END-->
+    <!--BMI CALCULATOR-->
+    <div class="container m-spacing">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="bmi-left">
+            <h1 class="bmi-title">BMI CALCULATOR</h1>
+            <p style="margin-bottom: 36px">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              suscipit inventore optio libero fugit aperiam repudiandae
+              asperiores, magni harum rem.
+            </p>
+            <p style="margin-bottom: 24px">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              suscipit inventore optio libero fugit aperiam repudiandae
+              asperiores, magni harum rem.
+            </p>
+            <div class="bmi-input-area">
+              <div class="bmi-inputs">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="yourHeight"
+                  placeholder="Your Height"
+                /><span>cm</span>
+              </div>
+              <div class="bmi-inputs">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="yourWeight"
+                  placeholder="Your Weight"
+                  onchange="calculateBmi(this.value)"
+                /><span>kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <div class="bmi-right">
+            <h1>Your BMI</h1>
+            <img src="images/bmi-index.jpg" class="img-fluid" alt="..." />
+            <!-- <div class="triangel-bmi-area">
+            </div> -->
+
+              <div class="triangle-bmi" id="triangle-bmi"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--BMI CALCULATOR END-->
+    <!--OUR BEST TRAINERS-->
+    <div class="our-trainers" id="trainers">
+      <div class="container">
+        <div class="row">
+          <h1 class="general-title">OUR BEST TRAINERS</h1>
+          <p class="general-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <div></div>
+        </div>
+      </div>
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 trainers">
+            <div class="trainer-borders">
+              <img
+                class="trainer-img img-fluid"
+                src="images/trainer1.jpg"
+                alt="..."
+              />
+              <div class="trainer-info">
+                Jasmin Doe<span>Personel Trainer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 trainers">
+            <div class="trainer-borders">
+              <img
+                class="trainer-img img-fluid"
+                src="images/trainer2.jpg"
+                alt="..."
+              />
+              <div class="trainer-info">
+                Jamal Doe<span>Fitness Trainer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 trainers">
+            <div class="trainer-borders">
+              <img
+                class="trainer-img img-fluid"
+                src="images/trainer3.jpg"
+                alt="..."
+              />
+              <div class="trainer-info">
+                Jane Doe<span>Cardio Trainer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--OUR BEST TRAINERS END-->
+    <!--PURCHASE FROM US-->
+    <div class="container m-spacing">
+      <div class="row">
+        <h1 class="general-title">PURCHASE FROM US</h1>
+        <p class="general-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s.
+        </p>
+        <div></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 m-spacing">
+          <div class="purchase-card">
+            <img src="images/purchase1.jpg" class="img-fluid" alt="..." />
+            <h2 class="purchase-title">Kettlebell / 5kg</h2>
+            <p>
+              <span style="font-weight: bold; color: black"
+                ><strike>89,99$</strike></span
+              >
+              / 59,99$
+            </p>
+            <div class="add-to-card">
+              <i class="bx bx-cart-add"></i>
+              <p>Add To Card</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 m-spacing">
+          <div class="purchase-card">
+            <img src="images/purchase2.jpg" class="img-fluid" alt="..." />
+            <h2 class="purchase-title">Treadmill / 5kg</h2>
+            <p>
+              <span style="font-weight: bold; color: black"
+                ><strike>899,99$</strike></span
+              >
+              / 599,99$
+            </p>
+            <div class="add-to-card">
+              <i class="bx bx-cart-add"></i>
+              <p>Add To Card</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 m-spacing">
+          <div class="purchase-card">
+            <img src="images/purchase3.jpg" class="img-fluid" alt="..." />
+            <h2 class="purchase-title">Adjustable Dumbbell</h2>
+            <p>
+              <span style="font-weight: bold; color: black"
+                ><strike>89,99$</strike></span
+              >
+              / 59,99$
+            </p>
+            <div class="add-to-card">
+              <i class="bx bx-cart-add"></i>
+              <p class="price">Add To Card</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 m-spacing">
+          <div class="purchase-card">
+            <img src="images/purchase4.jpg" class="img-fluid" alt="..." />
+            <h2 class="purchase-title">Kettlebell / 3kg</h2>
+            <p>
+              <span style="font-weight: bold; color: black"
+                ><strike>89,99$</strike></span
+              >
+              / 59,99$
+            </p>
+            <div class="add-to-card">
+              <i class="bx bx-cart-add"></i>
+              <p>Add To Card</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--PURCHASE FROM US END-->
+    <!--REVIEW-->
+    <div class="our-trainers">
+      <div class="container" id="review">
+        <div class="row">
+          <h1 class="general-title">REVIEW CLIENT</h1>
+          <p class="general-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <div></div>
+        </div>
+      </div>
+      <div class="container my-3">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <div class="user-area mt-5">
+              <img src="images/client1.jpg" class="img-fluid" alt="..." />
+              <div class="user-info">
+                <p>Diet Expert</p>
+                <p>CEO</p>
+              </div>
+            </div>
+            <div class="user-comment">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </div>
+            <div class="triangels">
+              <div class="triangle-one"></div>
+              <div class="triangle-two"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="user-area mt-5">
+              <img src="images/client2.jpg" class="img-fluid" alt="..." />
+              <div class="user-info">
+                <p>Cardio Trainer</p>
+                <p>CEO</p>
+              </div>
+            </div>
+            <div class="user-comment">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </div>
+            <div class="triangels">
+              <div class="triangle-one"></div>
+              <div class="triangle-two"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--REVIEW END-->
+    <!--CONTACT US START-->
+    <div class="container m-spacing" id="contact">
+      <div class="row">
+        <h1 class="general-title">CONTACT US</h1>
+        <p class="general-text">
+          Lorem ipsum is not simply random text. It has roots in a place of
+          classical at <br />
+          Hampden- Sydney College
+        </p>
+        <div class="col-lg-6 col-sm-12 px-5 m-spacing">
+          <div class="infos">
+            <div class="information">
+              <span>Mobile Number</span> <br />
+              +135 773 321 4442
+            </div>
+            <div class="information">
+              <span>Email Adress</span> <br />demo@demo.com
+            </div>
+          </div>
+          <h1 class="appointment mt-4">Make An Appointment</h1>
+          <div class="my-4">
+            <input
+              type="text"
+              class="form-control"
+              id="exampleFormControlInput1"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="email"
+              class="form-control"
+              id="exampleFormControlInput2"
+              placeholder="Your Email"
+            />
+          </div>
+          <div class="mb-4">
+            <textarea
+              class="form-control"
+              id="exampleFormControlTextarea1"
+              rows="5"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 px-5 m-spacing">
+          <iframe
+            class="google-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.717235259264!2d29.0368903!3d40.9876722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab870784d1389%3A0x2bf4921764859e70!2zw5xsa2VyIEZlbmVyYmFow6dlIMWew7xrcsO8IFNhcmFjb8SfbHUgU3RhZHl1bXU!5e0!3m2!1str!2str!4v1714250034665!5m2!1str!2str"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <!--CONTACT US END-->
+    <!--FOOTER-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <img src="images/logo.png" class="footer-logo" />
+          <div class="col-12 text-white mb-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </div>
+          <div class="col-6 footer-info">
+            <ul>
+              Information
+              <li>About Us</li>
+              <li>Classes</li>
+              <li>Blog</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="col-6 footer-info">
+            <ul>
+              Helpful Links
+              <li>Services</li>
+              <li>Supports</li>
+              <li>Teams & Condition</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--FOOTER END-->
+
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!--ICONLAR İÇİN-->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <!--SCROLL'DA NAVBAR BG VE SABİTLENMESİ-->
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 75 ||
+          document.documentElement.scrollTop > 75
+        ) {
+          document.getElementById("navbar-bg").style.backgroundColor =
+            "#355592";
+          document.getElementById("navbar-bg").style.transition =
+            "0.5s ease-in-out";
+          document.getElementById("navbar-bg").style.position = "fixed";
+          document.getElementById("navbar-bg").style.top = "0";
+          document.getElementById("navbar-bg").style.width = "100%";
+          document.getElementById("navbar-bg").style.zIndex = "99999";
+        } else {
+          document.getElementById("navbar-bg").style.backgroundColor =
+            "transparent";
+        }
+      }
+    </script>
+
+    <!--TAB ALANI ALT ÜÇGEN EKLEME-->
+
+    <script>
+      function openClass(evt, classesName, triangelsClasses) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        for (i = 1; i <= 4; i++) {
+          let classesId = `triangle${i}`;
+          if (classesId !== triangelsClasses) {
+            document.getElementById(classesId).style.display = "none";
+          }
+        }
+        document.getElementById(classesName).style.display = "block";
+        document.getElementById(triangelsClasses).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
+    <script>
+       document.getElementById("yourHeight").addEventListener("change", calculateBmi);
+      function calculateBmi(weight){
+        var height = document.getElementById("yourHeight")
+        height = height.value / 100
+        console.log(weight, height * height,"weight,height")
+        if(weight > 0 && height > 0){
+          var bmi =  (weight / (height * height))
+        }
+        console.log(bmi,"bmi")
+        var bmiArray = [18.5,24.9,29.9,34.9]
+        var leftPosition = [60,150,240,330]
+        for(let i in bmiArray){
+          if(bmi < bmiArray[i]){
+            document.getElementById("triangle-bmi").style.left = `${leftPosition[i]}px`
+            return;
+          }
+
+        }
+        document.getElementById("triangle-bmi").style.left = `${420}px`
+        //18,5 ==> 60 --> left özelliği ile kaydırılması gereken px
+        //18.5 < x > 24.9 ==> 150 --> left özelliği ile kaydırılması gereken px
+        //25 < x > 29.9 ==> 240  --> left özelliği ile kaydırılması gereken px
+        //30 < x > 34.9 ==> 330 --> left özelliği ile kaydırılması gereken px
+        //35 < x ==> 420 --> left özelliği ile kaydırılması gereken px
+      }
+    </script>
+  </body>
+</html>
