@@ -27,3 +27,6 @@
 
 
 **Sayfa  576px responsive tasarıma uygundur. Html, css, bootstrap ve javaScript kullanılarak yapılmıştır**
+
+
+*https://elbuzsportcenter.netlify.app/*
